@@ -45,6 +45,7 @@ services:
     environment:
       PHP_HOST: ${COMPOSE_PROJECT_NAME}_php:9000
       VIRTUAL_HOST: ${COMPOSE_PROJECT_DOMAIN}
+      LETSENCRYPT_HOST: ${COMPOSE_PROJECT_DOMAIN}
     command: >
       /bin/sh -c "envsubst '\$\$PHP_HOST'
       < /etc/nginx/default.template >
