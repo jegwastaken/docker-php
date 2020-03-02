@@ -13,4 +13,7 @@ vendor/
 .env
 
 # Project
+ncache/
 docker-compose.yml
+www/*
+!www/index.nginx-debian.html

@@ -1,5 +1,7 @@
 FROM php:7.2-fpm-alpine
 
+RUN apk add shadow && usermod -u 100 www-data && groupmod -g 101 www-data
+
 RUN apk add --no-cache \
 		bash \
 		sed \
