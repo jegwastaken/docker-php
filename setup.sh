@@ -48,5 +48,7 @@ services:
     container_name: ${PHP_ID}_php
     volumes:
       - ./ncache:/ncache
-      - ./www:/var/www/html${network}
+      - ./www:/var/www/html
+    environment:
+      PHP_SERVER_KEY: ${PHP_SERVER_KEY-insecure}${network}
 EOF
