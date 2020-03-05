@@ -48,6 +48,5 @@ services:
     container_name: ${PHP_ID}_php
     volumes:
       - ./ncache:/ncache
-      - ./www:/var/www/html
-      - ./default.conf:/etc/nginx/conf.d/${network}
+      - ./www:/var/www/html${network}
 EOF
