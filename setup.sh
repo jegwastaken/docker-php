@@ -22,10 +22,10 @@ cat > docker-compose.yml <<EOF
 version: '3.3'
 
 services:
-  ${PHP_DOMAIN}:
+  ${PHP_ID}_nginx:
     image: nginx:alpine
     restart: unless-stopped
-    container_name: ${PHP_DOMAIN}
+    container_name: ${PHP_ID}_nginx
     depends_on:
       - ${PHP_ID}_php
     volumes:
