@@ -69,6 +69,10 @@ RUN { \
 		echo 'html_errors = Off'; \
 	} > /usr/local/etc/php/conf.d/error-logging.ini
 
-RUN mkdir -p /var/www/html && chown www-data:www-data /var/www/html && chmod g+s /var/www/html
+RUN mkdir -p /var/www/html
+
+RUN chown www-data:www-data /var/www/html
+
+RUN chmod g+s /var/www/html
 
 VOLUME /var/www/html
