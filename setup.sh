@@ -34,6 +34,7 @@ services:
       - ./nginx/logs:/var/log/nginx
       - ./nginx/default.conf:/etc/nginx/default.template
       - ./nginx/extras:/etc/nginx/extras
+      - ./nginx/locations:/etc/nginx/locations
     environment:
       PHP_HOST: ${PHP_ID}_php:9000
       VIRTUAL_HOST: ${PHP_DOMAIN}
