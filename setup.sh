@@ -50,6 +50,7 @@ services:
     volumes:
       - ./ncache:/ncache
       - ./www:/var/www/html
+      - ./php/custom.ini:/usr/local/etc/php/conf.d/custom.ini
     environment:
       PHP_SERVER_KEY: ${PHP_SERVER_KEY-insecure}${network}
 EOF
