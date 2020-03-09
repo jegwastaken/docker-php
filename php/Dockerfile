@@ -71,7 +71,7 @@ RUN { \
 
 RUN mkdir -p /var/www/html
 
-RUN chown www-data:www-data /var/www/html
+RUN chown -R www-data:www-data /var/www/html
 
 RUN chmod g+s /var/www/html
 
